@@ -42,8 +42,8 @@ interface ChatItemProps {
 
 const roleIconMap = {
   GUEST: null,
-  MODERATOR: <ShieldCheck className="h-4 w-4 ml-2 text-indigo-500" />,
-  ADMIN: <ShieldAlert className="h-4 w-4 ml-2 text-emerald-500" />,
+  MODERATOR: <ShieldCheck className="h-4 w-4 ml-1 text-indigo-500" />,
+  ADMIN: <ShieldAlert className="h-4 w-4 ml-1 text-emerald-500" />,
 };
 
 const formSchema = z.object({
@@ -135,14 +135,17 @@ export const ChatItem = ({
           onClick={onMemberClick}
           className="cursor-pointer hover:drop-shadow-md transition"
         >
-          <UserAvatar src={member.profile.imageUrl} />
+          <UserAvatar
+            src={member.profile.imageUrl}
+            className="hover:scale-105 hover:border-[1px] hover:border-emerald-700"
+          />
         </div>
         <div className="flex flex-col w-full">
           <div className="flex items-center gap-x-2">
             <div className="flex items-center">
               <p
                 onClick={onMemberClick}
-                className="font-semibold text-sm hover:underline cursor-pointer"
+                className="font-semibold text-sm hover:underline underline-offset-2 cursor-pointer"
               >
                 {member.profile.name}
               </p>
@@ -165,18 +168,19 @@ export const ChatItem = ({
                 src={fileUrl}
                 alt={content}
                 fill
+                sizes="inherit"
                 className="object-cover"
               />
             </a>
           )}
           {isPDF && (
-            <div className="relative flex items-center p-2 mt-2 rounded-md bg-background/10">
+            <div className="relative flex items-center p-2 mt-2 rounded-md bg-zinc-200 group-hover:bg-zinc-300 dark:bg-background/20 dark:group-hover:bg-background/40">
               <FileIcon className="h-10 w-10 fill-indigo-200 stroke-indigo-400" />
               <a
                 href={fileUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-2 text-sm text-indigo-500 dark:text-indigo-400 hover:underline"
+                className="ml-2 text-sm text-indigo-500 dark:text-indigo-400 hover:underline underline-offset-2"
               >
                 PDF File
               </a>

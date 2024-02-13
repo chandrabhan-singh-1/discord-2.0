@@ -23,7 +23,7 @@ export const MediaRoom = ({ chatId, video, audio }: MediaRoomProps) => {
 
     const name = `${user.firstName} ${user.lastName}`;
 
-    (async () => {
+    const func1 = async () => {
       try {
         const resp = await fetch(
           `/api/livekit?room=${chatId}&username=${name}`
@@ -34,13 +34,15 @@ export const MediaRoom = ({ chatId, video, audio }: MediaRoomProps) => {
       } catch (error) {
         console.log("LiveKit Error: ", error);
       }
-    })();
+    };
+
+    func1();
   }, [user?.firstName, user?.lastName, chatId]);
 
   if (token === "") {
     return (
       <div className="flex flex-col flex-1 justify-center items-center">
-        <Loader2 className="h-7 w-7 text-zinc-500 animate-spin items-center" />
+        <Loader2 className="h-8 w-8 text-zinc-500 animate-spin items-center" />
         <p className="text-xs text-zinc-500 dark:text-zinc-400">Loading...</p>
       </div>
     );
