@@ -1,6 +1,8 @@
-# Discord 2.0: Next.js 13, LiveKit, Socket.io, Tanstack-Query, Prisma, Tailwind, PostgreSQL
+# Discord 2.0: Next.js, LiveKit, Socket.io, Tanstack-Query, Prisma, Tailwind, PostgreSQL
 
-This is a repository for a Fullstack Discord Clone created using: Next.js 13, LiveKit, Socket.io, Tanstack-Query, Prisma, Tailwind, PostgreSQL etc.
+![Discord 2.0](https://github.com/chandrabhan-singh-1/shared-assets/blob/main/Images/discord/discord-thumbnail.jpg)
+
+This is a repository for a Fullstack Discord Clone created using: Next.js, LiveKit, Socket.io, Tanstack-Query, Prisma, Tailwind, PostgreSQL etc.
 
 Features:
 
@@ -82,3 +84,6 @@ Running commands with npm `npm run [command]`
 | command | description                              |
 | :------ | :--------------------------------------- |
 | `dev`   | Starts a development instance of the app |
+
+Happy Coding...😊
+![coder](https://github.com/chandrabhan-singh-1/shared-assets/blob/main/Images/discord/imp/discord7.jpg)
