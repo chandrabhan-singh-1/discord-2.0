@@ -86,4 +86,5 @@ Running commands with npm `npm run [command]`
 | `dev`   | Starts a development instance of the app |
 
 Happy Coding...😊
+
 ![coder](https://github.com/chandrabhan-singh-1/shared-assets/blob/main/Images/discord/imp/discord7.jpg)
