@@ -10,11 +10,27 @@ import ModalPorivder from "@/components/providers/modal-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { SocketProvider } from "@/components/providers/socket-provider";
 import { QueryProvider } from "@/components/providers/query-provider";
+import { siteConfig } from "@/config/siteConfig";
+import { Metadata } from "next";
 
 export const fontSans = Open_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
+
+export const metadata: Metadata = {
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  icons: [
+    {
+      url: "/logo.png",
+      href: "/logo.png",
+    },
+  ],
+};
 
 export default function RootLayout({
   children,
