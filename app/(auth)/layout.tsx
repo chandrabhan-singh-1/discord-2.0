@@ -3,7 +3,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
     <div className="md:w-3/4 m-auto flex flex-col items-center justify-center">
       <div>
         <h1 className="text-3xl mt-4 font-bold bg-gradient-to-br bg-clip-text text-transparent from-rose-700 to-purple-600 ">
-          Welcome to the Discord-Clone
+          Welcome to the Discord 2.0
         </h1>
         <p className=" italic text-end mt-2">
           -by{" "}
